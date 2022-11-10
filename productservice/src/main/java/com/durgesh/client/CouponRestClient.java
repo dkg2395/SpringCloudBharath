@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.durgesh.entity.Coupon;
 
 @FeignClient("COUPON-SERVICE")
+//@FeignClient("ZUULAPIGATEWAY")
 public interface CouponRestClient {
 	
-	@GetMapping("/Coupon/{code}")
+	@GetMapping("/couponapim/Coupon/{code}")
 	Coupon getCoupon(@PathVariable("code") String code);
 
 }
